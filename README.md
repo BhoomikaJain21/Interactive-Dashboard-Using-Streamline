@@ -36,10 +36,5 @@ This project is an independently developed, interactive web dashboard built in P
     ```
 3.  **Run the Application:**
     ```bash
-    streamlit run app.py
+    streamlit run main.py
     ```
-
-## 🤝 Next Steps
-
-* Integrate a machine learning model for prediction or forecasting.
-* Explore alternative visualization libraries (e.g., Seaborn, Plotly) for richer interactivity.
