@@ -25,16 +25,11 @@ This project is an independently developed, interactive web dashboard built in P
 
 **Installation and Setup:**
 
-1.  **Clone the Repository:**
-    ```bash
-    git clone [https://github.com/BhoomikaJain21/](https://github.com/BhoomikaJain21/)[YourProjectName].git
-    cd [YourProjectName]
-    ```
-2.  **Install Dependencies:**
+1.  **Install Dependencies:**
     ```bash
     pip install streamlit pandas matplotlib numpy
     ```
-3.  **Run the Application:**
+2.  **Run the Application:**
     ```bash
     streamlit run main.py
     ```
