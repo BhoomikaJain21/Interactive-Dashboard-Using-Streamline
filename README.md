@@ -1,21 +1,27 @@
-# Interactive Data Dashboard using Streamlit
+# Interactive Stock Price Explorer (Streamlit App)
 
 ## 🌟 Project Overview
 
-This project is an independently developed, interactive web dashboard built in Python using the Streamlit framework. The primary objective was to gain practical proficiency in integrating key Data Science libraries—**Pandas** for robust data cleaning and manipulation, and **Matplotlib** for creating clear, informative visualizations—and deploying them within an accessible, user-friendly application environment provided by Streamlit.
+This is an interactive web application built in Python using **Streamlit** to provide a simple, real-time tool for historical stock price analysis. The application allows users to query any stock ticker, define a date range, and instantly view closing price trends and trading volumes.
+
+The primary objective was to gain practical proficiency in integrating the **yfinance** library for financial data fetching and using **Pandas** and **Matplotlib** for data processing and visualization within a deployable **Streamlit** interface.
 
 ## 💡 Key Features
 
-* **Interactive Filters:** Implements user controls (e.g., date sliders, dropdowns) to dynamically filter and analyze the underlying dataset.
-* **Dynamic Visualizations:** Generates and displays custom charts (bar charts, line plots) that update in real-time based on user input, enhancing exploratory data analysis.
-* **Data Summarization:** Utilizes Pandas to calculate and display key summary statistics and data overviews.
+* **Custom Data Fetching:** Utilizes the `yfinance` library to fetch daily historical data for any valid ticker symbol (e.g., AAPL, GOOGL).
+* **Technical Analysis:** Calculates and displays the **30-Day Simple Moving Average (SMA_30)**, overlaid on the closing price chart for trend analysis.
+* **Visualization:** Displays two main charts:
+    1.  Closing Price vs. Time (with SMA_30)
+    2.  Trading Volume (Bar Chart)
+* **Interactive Inputs:** Uses Streamlit widgets for ticker symbol, start date, and end date inputs.
 
 ## ⚙️ Technologies Used
 
-* **Python:** The core programming language.
-* **Streamlit:** For building the interactive web interface and deployment.
-* **Pandas:** For efficient data loading, cleaning, transformation, and analysis.
-* **Matplotlib:** For generating high-quality, customized data visualizations.
+* **Python:** Core programming language.
+* **Streamlit:** For building the interactive web interface.
+* **Pandas:** For data loading, manipulation, calculating the SMA (using `.rolling().mean()`), and data frame preparation.
+* **Matplotlib / pyplot:** For generating the trading volume bar chart.
+* **yfinance:** For reliable historical stock data retrieval.
 
 ## 🚀 Getting Started
 
@@ -27,9 +33,9 @@ This project is an independently developed, interactive web dashboard built in P
 
 1.  **Install Dependencies:**
     ```bash
-    pip install streamlit pandas matplotlib numpy
+    pip install streamlit pandas matplotlib yfinance seaborn
     ```
 2.  **Run the Application:**
     ```bash
-    streamlit run main.py
+    streamlit run app.py
     ```
